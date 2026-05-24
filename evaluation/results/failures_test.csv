@@ -1,0 +1,16 @@
+caso,turno_id,fase_real,fase_pred,confianza,actos_pred,contexto,operador_texto
+Mercedes,Mercedes_002,A,D,0.92,otro,"voz baja, contenida No sé si corresponde llamar aquí.","Podemos partir de a poco, señora. ¿Me puede decir su nombre?"
+Mercedes,Mercedes_010,A,C,0.79,otro,"Una biopsia. Yo fui por unos dolores, cansancio… cosas que una piensa que son la edad. Y hoy me dije",Le dijeron que tiene cáncer.
+Mercedes,Mercedes_015,A,E,0.74,otro,"Claro. Si yo se lo digo, capaz que se me muera él primero.",Ese miedo debe ser muy pesado.
+Mercedes,Mercedes_021,C,E,0.79,otro,"Además, no sé si quiero hacer nada. ¿Para qué? A esta edad, ¿para qué seguir luchando?","Señora Mercedes, le voy a preguntar algo importante y se lo pregunto con respeto. Cuando dice “no sé si quiero hacer nada”, ¿se refiere a que no quier"
+Mercedes,Mercedes_023,C,D,0.79,otro,No. No así.,"¿Ha pensado en dejar de tomar medicamentos, dejar de comer o hacer algo para apurar el final?"
+Mercedes,Mercedes_024,C,E,0.79,otro,"Pensé… pensé que quizás no valía la pena tomar nada más. Ni para esto, ni para lo otro.",Gracias por decírmelo. Eso es importante. ¿Ha dejado ya de tomar algún medicamento indicado?
+Mercedes,Mercedes_025,C,A,0.86,otro,No. Los míos no. Los de Nolasco se los di como siempre. Los míos… hoy no me tocaba mucho.,"Bien. Por ahora, no cambie ni suspenda medicamentos sin hablar con su médico. Una cosa es decidir tratamientos con información y acompañamiento; otra "
+Mercedes,Mercedes_026,C,B,0.7,otro,No quiero que me alarguen el sufrimiento.,Eso es distinto y es una conversación válida para tener con el equipo médico. Los cuidados paliativos no son para obligarla a “luchar” de cualquier ma
+Mercedes,Mercedes_027,C,E,0.69,otro,Eso no me lo explicaron así.,"Es posible que se lo hayan dicho, pero hoy era demasiado para escucharlo todo. RAMIFICACIÓN 1 — SI MERCEDES DICE QUE NO QUIERE VIVIR"
+Mercedes,Mercedes_028,C,A,0.75,otro,"No quiero morirme mañana, pero tampoco quiero seguir así.",Entiendo. Hay una parte de usted que no quiere seguir sufriendo y otra que todavía está pidiendo orientación. Hoy no vamos a tomar decisiones definiti
+Mercedes,Mercedes_029,C,B,0.67,otro,"Quizás lo mejor es dejarme estar no más. No comer, no moverme, no molestar.","Esa frase me preocupa, señora Mercedes. No porque usted esté haciendo algo malo, sino porque puede ser una forma de abandono después de un golpe muy f"
+Mercedes,Mercedes_030,B,D,0.9,otro,"Quizás lo mejor es dejarme estar no más. No comer, no moverme, no molestar.","Señora Mercedes, ¿cómo está su respiración ahora?"
+Mercedes,Mercedes_033,B,A,0.8,otro,exhala. La salida del aire tiembla.,"Otra vez. No para que desaparezca la pena, sino para que su cuerpo tenga un poco de espacio."
+Mercedes,Mercedes_037,B,A,0.65,otro,Siempre.,Mire alrededor de la salita. Dígame tres cosas que ve.
+Mercedes,Mercedes_038,B,E,0.92,otro,La mesa chica. Un retrato. Las cortinas.,Bien. Dos sonidos que escucha.

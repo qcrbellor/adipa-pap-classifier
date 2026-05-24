@@ -1,0 +1,16 @@
+{
+  "train": {
+    "Camila": 142,
+    "Javiera": 128,
+    "Patricio": 164,
+    "Hernán": 148,
+    "Rosa": 108,
+    "Matías": 111,
+    "Julia": 104,
+    "Carolina": 116
+  },
+  "test": {
+    "Mercedes": 115,
+    "Luis": 148
+  }
+}

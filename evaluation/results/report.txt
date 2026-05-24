@@ -1,0 +1,195 @@
+ADIPA PAP Classifier — Reporte de Evaluación
+Generado: 2026-05-24 13:37:21
+Modo: MOCK
+
+
+════════════════════════════════════════════════════════════
+  INTRA-TRAIN (8 casos)
+════════════════════════════════════════════════════════════
+  Accuracy: 65.0%  |  Total turnos: 1021
+
+  Fase                    Precision     Recall         F1   Support
+  --------------------------------------------------------------
+  A — Escucha Activa          0.546      0.714      0.619       133
+  B — Regulación              0.639      0.639      0.639       194
+  C — Categorización          0.652      0.699      0.675       196
+  D — Derivación              0.422      0.638      0.508        94
+  E — Psicoeducación          0.824      0.614      0.704       404
+  --------------------------------------------------------------
+  macro avg                   0.617      0.661      0.629
+  weighted avg                0.683      0.650      0.657
+
+  Matriz de confusión — TRAIN
+            pred_A  pred_B  pred_C  pred_D  pred_E
+  true_A       95      8      7     11     12
+  true_B       19    124     17     19     15
+  true_C       15     15    137     13     16
+  true_D        6      5     13     60     10
+  true_E       39     42     36     39    248
+
+  Errores de clasificación — train (primeros 15)
+  ──────────────────────────────────────────────────────────────────────
+
+  [1] Camila_003  real=A → pred=B  conf=0.81
+      PAC: Camila.
+      OP:  Camila, soy Matías. Voy a quedarme con usted en la llamada. No tiene que contarme todo de golpe. Primero quiero saber dónde está ahora.
+
+  [2] Camila_007  real=A → pred=E  conf=0.68
+      PAC: Sí.
+      OP:  ¿Tiene puesto el seguro o pestillo?
+
+  [3] Camila_010  real=A → pred=D  conf=0.70
+      PAC: Estoy en el suelo.
+      OP:  Está bien. Puede quedarse en el suelo. ¿Está herida físicamente? ¿Tiene sangre, golpes fuertes o dolor intenso?
+
+  [4] Camila_016  real=B → pred=A  conf=0.79
+      PAC: La esquina de la pared.
+      OP:  Bien. Mire esa esquina. No tiene que imaginar nada. Solo la esquina. ¿Sus pies están tocando el suelo?
+
+  [5] Camila_017  real=B → pred=D  conf=0.80
+      PAC: Sí.
+      OP:  Presione un poco los pies contra el suelo. No fuerte. Solo para notar que está aquí.
+
+  [6] Camila_018  real=B → pred=A  conf=0.83
+      PAC: Sí.
+      OP:  Ahora vamos a probar una respiración corta. Si no resulta, la dejamos. Inhale contando cuatro conmigo: uno… dos… tres… cuatro. Mantenga el aire: uno… 
+
+  [7] Camila_019  real=B → pred=A  conf=0.90
+      PAC: No puedo mantenerlo. No puedo.
+      OP:  Está bien. No lo fuerce. La técnica no tiene que salir perfecta. Hacemos una versión más simple: inhale dos, suelte cuatro. Inhale… uno, dos. Suelte… 
+
+  [8] Camila_020  real=B → pred=E  conf=0.70
+      PAC: exhala de forma temblorosa.
+      OP:  Otra vez. Inhale dos. Suelte cuatro.
+
+  [9] Camila_027  real=B → pred=C  conf=0.84
+      PAC: Estoy en mi departamento.
+      OP:  Exacto. Está en su departamento. No está en la encerrona.
+
+  [10] Camila_028  real=B → pred=A  conf=0.68
+      PAC: Estoy en mi departamento.
+      OP:  Ahora que pudo nombrar cosas de la pieza, probemos una vez más la respiración 4-4-4, solo una vuelta. Si no se puede, volvemos a la versión simple.
+
+  [11] Camila_031  real=B → pred=D  conf=0.67
+      PAC: No sé. Me da miedo.
+      OP:  Entonces paramos. Eso también es control: usted puede decir cuándo parar. Suelte el aire largo una vez más.
+
+  [12] Camila_039  real=C → pred=A  conf=0.65
+      PAC: Pero necesito saber.
+      OP:  Camila, ahora vamos a ordenar lo urgente. Le haré preguntas cortas. No para que reviva todo, sino para saber qué necesita primero. ¿La encerrona ocurr
+
+  [13] Camila_044  real=C → pred=A  conf=0.84
+      PAC: No puedo hacer todo eso.
+      OP:  No tiene que hacerlo sola ni ahora mismo. Primero usted. Después una acción. Después otra.
+
+  [14] Camila_048  real=C → pred=D  conf=0.94
+      PAC: Sí.
+      OP:  Pies al suelo. Exhale lento. Ahora vamos a sumar una medida concreta: avisar al conserje que no deje subir a nadie. ¿Tiene citófono?
+
+  [15] Camila_049  real=C → pred=A  conf=0.90
+      PAC: Sí. Está en la entrada.
+      OP:  Irá al citófono sin abrir la puerta. Yo sigo con usted. Antes de pararse, una exhalación larga.
+
+
+
+════════════════════════════════════════════════════════════
+  HELD-OUT TEST (Mercedes + Luis)
+════════════════════════════════════════════════════════════
+  Accuracy: 70.3%  |  Total turnos: 263
+
+  Fase                    Precision     Recall         F1   Support
+  --------------------------------------------------------------
+  A — Escucha Activa          0.604      0.744      0.667        43
+  B — Regulación              0.538      0.656      0.592        32
+  C — Categorización          0.600      0.636      0.618        33
+  D — Derivación              0.650      0.743      0.693        35
+  E — Psicoeducación          0.885      0.708      0.787       120
+  --------------------------------------------------------------
+  macro avg                   0.655      0.698      0.671
+  weighted avg                0.730      0.703      0.710
+
+  Matriz de confusión — TEST
+            pred_A  pred_B  pred_C  pred_D  pred_E
+  true_A       32      4      3      2      2
+  true_B        5     21      2      1      3
+  true_C        3      3     21      2      4
+  true_D        3      4      0     26      2
+  true_E       10      7      9      9     85
+
+  Errores de clasificación — test (primeros 15)
+  ──────────────────────────────────────────────────────────────────────
+
+  [1] Mercedes_002  real=A → pred=D  conf=0.92
+      PAC: voz baja, contenida No sé si corresponde llamar aquí.
+      OP:  Podemos partir de a poco, señora. ¿Me puede decir su nombre?
+
+  [2] Mercedes_010  real=A → pred=C  conf=0.79
+      PAC: Una biopsia. Yo fui por unos dolores, cansancio… cosas que una piensa que son la edad. Y hoy me dije
+      OP:  Le dijeron que tiene cáncer.
+
+  [3] Mercedes_015  real=A → pred=E  conf=0.74
+      PAC: Claro. Si yo se lo digo, capaz que se me muera él primero.
+      OP:  Ese miedo debe ser muy pesado.
+
+  [4] Mercedes_021  real=C → pred=E  conf=0.79
+      PAC: Además, no sé si quiero hacer nada. ¿Para qué? A esta edad, ¿para qué seguir luchando?
+      OP:  Señora Mercedes, le voy a preguntar algo importante y se lo pregunto con respeto. Cuando dice “no sé si quiero hacer nada”, ¿se refiere a que no quier
+
+  [5] Mercedes_023  real=C → pred=D  conf=0.79
+      PAC: No. No así.
+      OP:  ¿Ha pensado en dejar de tomar medicamentos, dejar de comer o hacer algo para apurar el final?
+
+  [6] Mercedes_024  real=C → pred=E  conf=0.79
+      PAC: Pensé… pensé que quizás no valía la pena tomar nada más. Ni para esto, ni para lo otro.
+      OP:  Gracias por decírmelo. Eso es importante. ¿Ha dejado ya de tomar algún medicamento indicado?
+
+  [7] Mercedes_025  real=C → pred=A  conf=0.86
+      PAC: No. Los míos no. Los de Nolasco se los di como siempre. Los míos… hoy no me tocaba mucho.
+      OP:  Bien. Por ahora, no cambie ni suspenda medicamentos sin hablar con su médico. Una cosa es decidir tratamientos con información y acompañamiento; otra 
+
+  [8] Mercedes_026  real=C → pred=B  conf=0.70
+      PAC: No quiero que me alarguen el sufrimiento.
+      OP:  Eso es distinto y es una conversación válida para tener con el equipo médico. Los cuidados paliativos no son para obligarla a “luchar” de cualquier ma
+
+  [9] Mercedes_027  real=C → pred=E  conf=0.69
+      PAC: Eso no me lo explicaron así.
+      OP:  Es posible que se lo hayan dicho, pero hoy era demasiado para escucharlo todo. RAMIFICACIÓN 1 — SI MERCEDES DICE QUE NO QUIERE VIVIR
+
+  [10] Mercedes_028  real=C → pred=A  conf=0.75
+      PAC: No quiero morirme mañana, pero tampoco quiero seguir así.
+      OP:  Entiendo. Hay una parte de usted que no quiere seguir sufriendo y otra que todavía está pidiendo orientación. Hoy no vamos a tomar decisiones definiti
+
+  [11] Mercedes_029  real=C → pred=B  conf=0.67
+      PAC: Quizás lo mejor es dejarme estar no más. No comer, no moverme, no molestar.
+      OP:  Esa frase me preocupa, señora Mercedes. No porque usted esté haciendo algo malo, sino porque puede ser una forma de abandono después de un golpe muy f
+
+  [12] Mercedes_030  real=B → pred=D  conf=0.90
+      PAC: Quizás lo mejor es dejarme estar no más. No comer, no moverme, no molestar.
+      OP:  Señora Mercedes, ¿cómo está su respiración ahora?
+
+  [13] Mercedes_033  real=B → pred=A  conf=0.80
+      PAC: exhala. La salida del aire tiembla.
+      OP:  Otra vez. No para que desaparezca la pena, sino para que su cuerpo tenga un poco de espacio.
+
+  [14] Mercedes_037  real=B → pred=A  conf=0.65
+      PAC: Siempre.
+      OP:  Mire alrededor de la salita. Dígame tres cosas que ve.
+
+  [15] Mercedes_038  real=B → pred=E  conf=0.92
+      PAC: La mesa chica. Un retrato. Las cortinas.
+      OP:  Bien. Dos sonidos que escucha.
+
+════════════════════════════════════════════════════════════
+  Desglose por caso held-out
+════════════════════════════════════════════════════════════
+  Mercedes      accuracy=68.7%  macro-F1=0.641  n=115
+  Luis          accuracy=71.6%  macro-F1=0.689  n=148
+
+════════════════════════════════════════════════════════════
+  Gap train → held-out
+════════════════════════════════════════════════════════════
+  Macro-F1 train : 0.629
+  Macro-F1 test  : 0.671
+  Gap            : -0.042  ▲
+  ✅ Gap pequeño: el clasificador generaliza bien a arquetipos nuevos.
+════════════════════════════════════════════════════════════

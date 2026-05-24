@@ -1,0 +1,16 @@
+caso,turno_id,fase_real,fase_pred,confianza,actos_pred,contexto,operador_texto
+Camila,Camila_003,A,B,0.81,otro,Camila.,"Camila, soy Matías. Voy a quedarme con usted en la llamada. No tiene que contarme todo de golpe. Primero quiero saber dónde está ahora."
+Camila,Camila_007,A,E,0.68,otro,Sí.,¿Tiene puesto el seguro o pestillo?
+Camila,Camila_010,A,D,0.7,otro,Estoy en el suelo.,"Está bien. Puede quedarse en el suelo. ¿Está herida físicamente? ¿Tiene sangre, golpes fuertes o dolor intenso?"
+Camila,Camila_016,B,A,0.79,otro,La esquina de la pared.,Bien. Mire esa esquina. No tiene que imaginar nada. Solo la esquina. ¿Sus pies están tocando el suelo?
+Camila,Camila_017,B,D,0.8,otro,Sí.,Presione un poco los pies contra el suelo. No fuerte. Solo para notar que está aquí.
+Camila,Camila_018,B,A,0.83,otro,Sí.,"Ahora vamos a probar una respiración corta. Si no resulta, la dejamos. Inhale contando cuatro conmigo: uno… dos… tres… cuatro. Mantenga el aire: uno… "
+Camila,Camila_019,B,A,0.9,otro,No puedo mantenerlo. No puedo.,"Está bien. No lo fuerce. La técnica no tiene que salir perfecta. Hacemos una versión más simple: inhale dos, suelte cuatro. Inhale… uno, dos. Suelte… "
+Camila,Camila_020,B,E,0.7,otro,exhala de forma temblorosa.,Otra vez. Inhale dos. Suelte cuatro.
+Camila,Camila_027,B,C,0.84,otro,Estoy en mi departamento.,Exacto. Está en su departamento. No está en la encerrona.
+Camila,Camila_028,B,A,0.68,otro,Estoy en mi departamento.,"Ahora que pudo nombrar cosas de la pieza, probemos una vez más la respiración 4-4-4, solo una vuelta. Si no se puede, volvemos a la versión simple."
+Camila,Camila_031,B,D,0.67,otro,No sé. Me da miedo.,Entonces paramos. Eso también es control: usted puede decir cuándo parar. Suelte el aire largo una vez más.
+Camila,Camila_039,C,A,0.65,otro,Pero necesito saber.,"Camila, ahora vamos a ordenar lo urgente. Le haré preguntas cortas. No para que reviva todo, sino para saber qué necesita primero. ¿La encerrona ocurr"
+Camila,Camila_044,C,A,0.84,otro,No puedo hacer todo eso.,No tiene que hacerlo sola ni ahora mismo. Primero usted. Después una acción. Después otra.
+Camila,Camila_048,C,D,0.94,otro,Sí.,Pies al suelo. Exhale lento. Ahora vamos a sumar una medida concreta: avisar al conserje que no deje subir a nadie. ¿Tiene citófono?
+Camila,Camila_049,C,A,0.9,otro,Sí. Está en la entrada.,"Irá al citófono sin abrir la puerta. Yo sigo con usted. Antes de pararse, una exhalación larga."
