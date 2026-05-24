@@ -128,7 +128,7 @@ uvicorn api.main:app --reload --port 8000
 ## Construir el dataset desde el .docx original
 
 ```bash
-pip install python-docx
+pip install -r requirements-dev.txt
 python data/build_dataset.py Prueba_Tecnica_ADIPA.docx
 ```
 

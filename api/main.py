@@ -1,13 +1,10 @@
 import os
 import logging
-import sys
 from contextlib import asynccontextmanager
 
 from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import JSONResponse
 from fastapi.middleware.cors import CORSMiddleware
-
-sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 from classifier import PAPClassifier
 from api.schemas import ClassifyRequest, ClassifyResponse, HealthResponse, ErrorResponse

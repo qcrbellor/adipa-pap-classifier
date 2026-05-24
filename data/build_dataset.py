@@ -167,6 +167,7 @@ def parse(paragraphs: list[str]) -> list[dict]:
             op_buffer.clear()
             return
         text = " ".join(op_buffer).strip()
+        text = re.sub(r'\s*RAMIFICACI[OÓ]N\s+\d+[^.]*\.?', '', text).strip()
         if len(text) < 3:
             op_buffer.clear()
             return
