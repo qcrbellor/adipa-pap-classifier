@@ -191,5 +191,5 @@ Modo: MOCK
   Macro-F1 train : 0.629
   Macro-F1 test  : 0.671
   Gap            : -0.042  ▲
-  ✅ Gap pequeño: el clasificador generaliza bien a arquetipos nuevos.
+  Gap pequeño: el clasificador generaliza bien a arquetipos nuevos.
 ════════════════════════════════════════════════════════════
