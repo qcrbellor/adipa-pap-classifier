@@ -332,5 +332,5 @@ if __name__ == "__main__":
 
     report(records)
 
-    print(f"✅  {csv_path.name}    guardado en {csv_path.parent}")
-    print(f"✅  {split_path.name} guardado en {split_path.parent}")
+    print(f"  {csv_path.name}    guardado en {csv_path.parent}")
+    print(f"  {split_path.name} guardado en {split_path.parent}")
