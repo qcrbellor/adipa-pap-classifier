@@ -197,7 +197,7 @@ def format_confusion_matrix(matrix: dict, title: str) -> str:
 
 def format_failures(failures: list[dict], title: str) -> str:
     if not failures:
-        return f"\n  ✅ Sin errores en {title}"
+        return f"\n  Sin errores en {title}"
     lines = [f"\n  Errores de clasificación — {title} (primeros {len(failures)})"]
     lines.append(f"  {'─'*70}")
     for i, f in enumerate(failures, 1):
@@ -261,28 +261,28 @@ def run_evaluation(use_mock: bool = False):
 
     if use_mock:
         clf = MockClassifier()
-        print("  ⚠️  Usando clasificador simulado (--mock)\n")
+        print("  Usando clasificador simulado (--mock)\n")
     else:
         api_key = os.getenv("ANTHROPIC_API_KEY", "")
         if not api_key:
-            print("  ⚠️  ANTHROPIC_API_KEY no configurada — usando mock automáticamente\n")
+            print("  ANTHROPIC_API_KEY no configurada — usando mock automáticamente\n")
             clf = MockClassifier()
         else:
             clf = PAPClassifier(api_key=api_key, use_cache=True)
-            print("  ✅  Clasificador LLM inicializado\n")
+            print("  Clasificador LLM inicializado\n")
 
     print(f"  Clasificando {len(train_rows)} turnos de TRAIN...")
     t0 = time.time()
     train_preds = clf.classify_batch(train_rows, verbose=True)
     train_time = time.time() - t0
-    print(f"  ✅ Train completado en {train_time:.1f}s "
+    print(f"  Train completado en {train_time:.1f}s "
           f"({train_time/len(train_rows)*1000:.0f}ms/turno)\n")
 
     print(f"  Clasificando {len(test_rows)} turnos de TEST (held-out: Mercedes + Luis)...")
     t0 = time.time()
     test_preds = clf.classify_batch(test_rows, verbose=True)
     test_time = time.time() - t0
-    print(f"  ✅ Test completado en {test_time:.1f}s "
+    print(f"  Test completado en {test_time:.1f}s "
           f"({test_time/len(test_rows)*1000:.0f}ms/turno)\n")
 
     train_true = [r["fase"] for r in train_rows]
@@ -336,9 +336,9 @@ def run_evaluation(use_mock: bool = False):
     gap_sign = "▼" if f1_gap > 0.05 else ("▲" if f1_gap < 0 else "≈")
     report_lines.append(f"  Gap            : {f1_gap:+.3f}  {gap_sign}")
     if f1_gap > 0.15:
-        report_lines.append("  ⚠️  Gap > 0.15 sugiere sobreajuste al estilo de redacción del train.")
+        report_lines.append("  Gap > 0.15 sugiere sobreajuste al estilo de redacción del train.")
     elif f1_gap < 0.05:
-        report_lines.append("  ✅ Gap pequeño: el clasificador generaliza bien a arquetipos nuevos.")
+        report_lines.append("  Gap pequeño: el clasificador generaliza bien a arquetipos nuevos.")
     report_lines.append(f"{'═'*60}\n")
 
     full_report = "\n".join(report_lines)
