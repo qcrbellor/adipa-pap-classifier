@@ -3,8 +3,6 @@
 Clasificador de turnos del operador en sesiones de **Primeros Auxilios Psicológicos (PAP)**.
 Predice la **fase ABCDE** y los **actos verbales** de cada turno del psicólogo.
 
-Construido para la prueba técnica de Machine Learning Engineer — ADIPA Lab.
-
 ---
 
 ## Levantar el servicio en un comando
@@ -93,7 +91,7 @@ curl -X POST http://localhost:8000/classify \
 
 ---
 
-### Input inválido → 422 (nunca 500)
+### Input inválido → 422
 
 ```bash
 curl -X POST http://localhost:8000/classify \
@@ -115,7 +113,7 @@ curl -X POST http://localhost:8000/classify \
 
 ---
 
-## Desarrollo local (sin Docker)
+## Desarrollo local
 
 ```bash
 pip install -r requirements.txt
@@ -129,7 +127,7 @@ uvicorn api.main:app --reload --port 8000
 
 ```bash
 pip install -r requirements-dev.txt
-python data/build_dataset.py Prueba_Tecnica_ADIPA.docx
+python data/build_dataset.py technical_test.docx
 ```
 
 Genera `data/dataset.csv` y `data/dataset_splits.json`.
@@ -144,7 +142,7 @@ python evaluation/evaluate.py
 ```
 
 Genera reporte con precision/recall/F1 por fase, matriz de confusión
-y ejemplos de errores — separado por split intra-train y held-out.
+y ejemplos de errores, separado por split intra-train y held-out.
 
 ---
 
@@ -153,12 +151,12 @@ y ejemplos de errores — separado por split intra-train y held-out.
 ```
 adipa-pap-classifier/
 ├── data/
-│   ├── build_dataset.py      # extrae turnos del .docx → dataset.csv
+│   ├── build_dataset.py      # extrae turnos del .docx a dataset.csv
 │   ├── dataset.csv           # dataset construido (1284 turnos)
-│   └── dataset_splits.json   # resumen del split por caso
+│   └── dataset_splits.json   # splits por caso
 ├── classifier/
 │   ├── classifier.py         # PAPClassifier — LLM few-shot + fallback
-│   ├── prompts.py            # system prompt + 10 ejemplos few-shot
+│   ├── prompts.py            # system prompt
 │   └── __init__.py
 ├── api/
 │   ├── main.py               # FastAPI app — /health + /classify
@@ -167,7 +165,7 @@ adipa-pap-classifier/
 ├── evaluation/
 │   └── evaluate.py           # arnés de evaluación reproducible
 ├── writeup/
-│   └── writeup.md            # análisis y preguntas de juicio (2 páginas)
+│   └── writeup.md            # análisis
 ├── Dockerfile
 ├── requirements.txt
 └── README.md
@@ -198,7 +196,7 @@ de calidad revisadas por clínicos.
 
 **¿Por qué `claude-haiku-4-5-20251001` y no Sonnet?**
 Haiku ofrece ~200ms de latencia vs ~800ms de Sonnet. El objetivo de producción
-es ~900ms por turno en sesión de voz — Haiku lo cumple holgadamente con menor
+es ~900ms por turno en sesión de voz. Haiku lo cumple holgadamente con menor
 costo por request.
 
 **¿Qué le falta para producción real?**
