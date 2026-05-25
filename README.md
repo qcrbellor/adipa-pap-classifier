@@ -115,6 +115,8 @@ curl -X POST http://localhost:8000/classify \
 
 ## Desarrollo local
 
+Requiere **Python ≥ 3.10**.
+
 ```bash
 pip install -r requirements.txt
 export ANTHROPIC_API_KEY=sk-ant-...
@@ -163,11 +165,14 @@ adipa-pap-classifier/
 │   ├── schemas.py            # contratos Pydantic request/response
 │   └── __init__.py
 ├── evaluation/
-│   └── evaluate.py           # arnés de evaluación reproducible
+│   ├── evaluate.py           # arnés de evaluación reproducible
+│   └── results/              # métricas, matrices y errores generados
 ├── writeup/
 │   └── writeup.md            # análisis
 ├── Dockerfile
 ├── requirements.txt
+├── requirements-dev.txt
+├── LICENSE
 └── README.md
 ```
 
@@ -188,7 +193,7 @@ adipa-pap-classifier/
 ## Decisiones técnicas clave
 
 **¿Por qué LLM few-shot y no modelo entrenado?**
-Con ~800 turnos de entrenamiento (8 casos) y etiquetas débiles derivadas de
+Con ~1.000 turnos de entrenamiento (8 casos) y etiquetas débiles derivadas de
 headers estructurales, el riesgo de overfitting es alto. Un LLM preentrenado
 con comprensión semántica clínica generaliza mejor con pocos datos.
 La señal para migrar a fine-tuning es acumular >5.000 turnos con etiquetas
