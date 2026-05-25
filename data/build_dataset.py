@@ -316,7 +316,7 @@ if __name__ == "__main__":
                      list(Path(__file__).parent.parent.glob("*.docx"))
         if not candidates:
             print("ERROR: No se encontró ningún .docx.")
-            print("Uso: python build_dataset.py ruta/a/Prueba_Tecnica_ADIPA.docx")
+            print("Uso: python build_dataset.py ruta/a/technical_test.docx")
             sys.exit(1)
         docx_path = candidates[0]
 
